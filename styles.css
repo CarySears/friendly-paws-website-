@@ -1155,6 +1155,20 @@ body {
         max-width: 200px;
     }
 
+    .hero-image {
+        margin-top: 2rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .floating-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 0.75rem;
+        padding: 0.5rem 0.75rem;
+    }
+
     .section-header h2 {
         font-size: 2rem;
     }
