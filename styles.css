@@ -1088,8 +1088,17 @@ body {
     .about-content,
     .contact-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
         text-align: center;
+    }
+
+    .hero-image {
+        order: 2;
+        margin-top: 2rem;
+    }
+
+    .hero-text {
+        order: 1;
     }
 
     .hero-text h1 {
@@ -1156,9 +1165,15 @@ body {
     }
 
     .hero-image {
-        margin-top: 2rem;
+        margin-top: 3rem;
         position: relative;
         z-index: 1;
+        order: 2;
+    }
+
+    .hero-text {
+        order: 1;
+        margin-bottom: 2rem;
     }
 
     .floating-badge {
@@ -1167,6 +1182,10 @@ body {
         right: 10px;
         font-size: 0.75rem;
         padding: 0.5rem 0.75rem;
+    }
+
+    .image-card img {
+        height: 300px;
     }
 
     .section-header h2 {
