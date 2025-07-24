@@ -283,13 +283,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Parallax effect for hero section
+// Parallax effect for hero section (disabled on mobile)
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
     const heroImage = document.querySelector('.hero-image');
     
-    if (hero && heroImage) {
+    // Disable parallax on mobile devices to prevent overlap
+    if (hero && heroImage && window.innerWidth > 768) {
         const rate = scrolled * -0.5;
         heroImage.style.transform = `translateY(${rate}px)`;
     }
