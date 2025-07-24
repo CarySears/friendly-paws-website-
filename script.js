@@ -96,9 +96,13 @@ const statsObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const statNumbers = entry.target.querySelectorAll('.stat-number');
             statNumbers.forEach(stat => {
+                // Skip animation for 24/7 text
+                if (stat.textContent === '24/7') {
+                    return;
+                }
+                
                 const target = stat.textContent.includes('+') ? 
                     parseInt(stat.textContent.replace('+', '')) : 
-                    stat.textContent === '24/7' ? 24 : 
                     parseInt(stat.textContent);
                 
                 if (!isNaN(target)) {
