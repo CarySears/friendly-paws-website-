@@ -1262,3 +1262,38 @@ textarea:focus {
         line-height: 1.4;
     }
 }
+
+/* ==========================================
+   Hot pink text override (global)
+   ========================================== */
+/* Force all textual content to hot pink */
+html, body, body * {
+    color: hotpink !important;
+}
+
+/* Ensure placeholders are hot pink */
+::placeholder {
+    color: hotpink !important;
+    opacity: 1 !important;
+}
+
+/* Override gradient highlight text to plain hot pink */
+.highlight {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: hotpink !important;
+    color: hotpink !important;
+}
+
+/* Explicitly override common text-bearing classes (wins over other !important rules) */
+body .cta-btn,
+body .btn,
+body .btn-primary,
+body .btn-secondary,
+body .btn-outline,
+body .nav-link,
+body .footer,
+body .footer * {
+    color: hotpink !important;
+}
